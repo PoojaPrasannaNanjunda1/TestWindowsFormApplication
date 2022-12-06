@@ -18,9 +18,7 @@ The prerequisites for running this application are:
 6. `Form1.cs` provides the main functionality of this form application.
 7. This solution is dependent on the NuGet packages: `System.Data.SQLite.Core 1.0.117` and `StyleCop.Analyzers 1.1.118`. Ensure that the package dependencies are resolved when clicking on `Build Solution` or `(Ctrl + Shift + B)`.
 8. Launch the application by clicking on `Start without Debugging` or `(Ctrl + F5)`.
-9. The Windows form application page should be visible upon a successful build as shown below:
-
-<img src="images/TestWindowsFormApplication.png" width="100%" alt="Windows Form Application">
+9. The Windows form application page should be visible upon a successful build as shown below.
 
 ## (or) Directly run using the release
 1. Download the release package of this application depending on the OS (Windows / Linux) and system architecture (x86 / x64).
