@@ -11,8 +11,8 @@ The prerequisites for running this application are:
 1. Download the database provided in the repository under `Database\Testdatabase.db`.
 2. Open the `WinFormsTestApp1.sln` file given in the repository to view the source code for Windows form application.
 3. Configure the `ApplicationInstanceName` and `DatabasePath` keys in the `App.config` file as per user's requirement.
-3.1. `ApplicationInstanceName`: indicates the name / title for the form application. This is also used while writing input data to database. Multiple instances of this application can be launched with different instance names for each one of them.
-3.2. `DatabasePath`: indicates the path to the local SQLite database. A new database is provided in this repository under `Database\Testdatabase.db`.
+`ApplicationInstanceName`: indicates the name / title for the form application. This is also used while writing input data to database. Multiple instances of this application can be launched with different instance names for each one of them.
+`DatabasePath`: indicates the path to the local SQLite database. A new database is provided in this repository under `Database\Testdatabase.db`.
 4. `Program.cs` is the entry point for this application.
 5. `Form1.Designer.cs` provides the layout and callback methods used by form elements.
 6. `Form1.cs` provides the main functionality of this form application.
