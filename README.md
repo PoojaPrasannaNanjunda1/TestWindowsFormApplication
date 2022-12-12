@@ -8,9 +8,9 @@ The prerequisites for running this application are:
 
 ## Build and run using Visual Studio 2022
 1. Open the `WinFormsTestApp1.sln` file given in the repository to view the source code for Windows form application.
-2. Configure the `ApplicationInstanceName` and `DatabasePath` keys in the `App.config` file as per user's requirement. Add the path without the database file name. For example, the value of `DatabasePath` key can be `"C:\\Projects\\Netzsch\\Database"`. 
-`ApplicationInstanceName`: indicates the name / title for the form application. This is also used while writing input data to database. Multiple instances of this application can be launched with different instance names for each one of them.
-`DatabasePath`: indicates the path to the local SQLite database. By default, it creates a new database `Testdatabase.db` in the `DatabasePath` folder.
+2. Configure the `ApplicationInstanceName` and `DatabasePath` keys in the `App.config` file as per user's requirement. Add the path without the database file name. For example, the value of `DatabasePath` key can be `"C:\\Projects\\Netzsch\\Database"`.\
+  `ApplicationInstanceName`: indicates the name / title for the form application. This is also used while writing input data to database. Multiple instances of this application can be launched with different instance names for each one of them.\
+  `DatabasePath`: indicates the path to the local SQLite database. By default, it creates a new database `TestDatabase.db` in the `DatabasePath` folder.
 3. `Program.cs` is the entry point for this application.
 4. `Form1.Designer.cs` provides the layout and callback methods used by form elements.
 5. `Form1.cs` provides the main functionality of this form application.
@@ -20,9 +20,9 @@ The prerequisites for running this application are:
 
 ## (or) Directly run using the release
 1. Download the release package of this application.
-2. Unzip the release package and configure the `ApplicationInstanceName` and `DatabasePath` keys in the `WinFormsTestApp1.dll.config` file as per user's requirement. Add the path without the database file name. For example, the value of `DatabasePath` key can be `"C:\\Projects\\Netzsch\\Database"`.
-2.1. `ApplicationInstanceName`: indicates the name / title for the form application. This is also used while writing input data to database. Multiple instances of this application can be launched by duplicating the entire release folder and providing different instance names for each one of them.
-2.2. `DatabasePath`: indicates the path to the local SQLite database. By default, it creates a new database `Testdatabase.db` in the `DatabasePath` folder.
+2. Unzip the release package and configure the `ApplicationInstanceName` and `DatabasePath` keys in the `WinFormsTestApp1.dll.config` file as per user's requirement. Add the path without the database file name. For example, the value of `DatabasePath` key can be `"C:\\Projects\\Netzsch\\Database"`.\
+  `ApplicationInstanceName`: indicates the name / title for the form application. This is also used while writing input data to database. Multiple instances of this application can be launched by duplicating the entire release folder and providing different instance names for each one of them.\
+  `DatabasePath`: indicates the path to the local SQLite database. By default, it creates a new database `TestDatabase.db` in the `DatabasePath` folder.
 3. The application can be launched by opening `WinFormsTestApp1.exe` in the unzipped folder.
 
 <img src="images/TestWindowsFormApplication.png" width="100%" alt="Windows Form Application">
