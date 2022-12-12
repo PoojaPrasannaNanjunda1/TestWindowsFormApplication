@@ -8,6 +8,7 @@
 namespace WinFormsTestApp1
 {
     using System.Data.SQLite;
+    using System.IO;
     using System.Windows.Forms;
     using global::WinFormsTestApp1.Entities;
 
@@ -138,10 +139,18 @@ namespace WinFormsTestApp1
         /// <returns>The connection object.</returns>
         private SQLiteConnection CreateConnection()
         {
+            // Create the database folder structure if it does not exist
+            if (!Directory.Exists(this.settings.DatabasePath))
+            {
+                Directory.CreateDirectory(this.settings.DatabasePath);
+            }
+
+            var dataSource = Path.Combine(this.settings.DatabasePath, "TestDatabase.db");
+
             SQLiteConnection sqlite_conn;
 
             // Create a new database connection:
-            sqlite_conn = new SQLiteConnection($"Data Source= {settings.DatabasePath}; Version = 3; New = True; Compress = True; ");
+            sqlite_conn = new SQLiteConnection($"Data Source= {dataSource}; Version = 3; New = True; Compress = True; ");
 
             // Open the connection:
             try
@@ -190,7 +199,7 @@ namespace WinFormsTestApp1
             {
                 SQLiteCommand sqlite_cmd;
                 sqlite_cmd = this.sqliteConn.CreateCommand();
-                sqlite_cmd.CommandText = $"INSERT INTO DataTable (TextData, Sender) VALUES('{input}', '{settings.ApplicationInstanceName}');";
+                sqlite_cmd.CommandText = $"INSERT INTO DataTable (TextData, Sender) VALUES('{input}', '{this.settings.ApplicationInstanceName}');";
                 sqlite_cmd.ExecuteNonQuery();
                 return true;
             }
